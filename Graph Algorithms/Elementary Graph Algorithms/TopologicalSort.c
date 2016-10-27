@@ -14,6 +14,7 @@ First line represents the no.of inputs and the alternate lines there after repre
 
 */
 #include<stdio.h>
+#include<malloc.h>
 
 typedef struct graph
 {
