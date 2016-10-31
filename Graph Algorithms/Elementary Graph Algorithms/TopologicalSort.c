@@ -101,7 +101,7 @@ void insert(node *adjacent[],int n)
 	node *p = NULL,*temp = NULL;
 	for(i = 0;i < n;i++)
 	{
-		printf("Enter the no of edges adn then the edge(s) for vertex %d respectively: ",i);
+		printf("Enter the no of edges and then the edge(s) for vertex %d respectively: ",i);
 		scanf("%d",&num);
 		for(j = 0;j < num;j++)
 		{
