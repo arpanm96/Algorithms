@@ -21,6 +21,7 @@ typedef struct graph
 	int vertex;
 	struct graph *next;
 }node;
+
 node *topo = NULL;
 
 // create a adjacency list for the graph 
@@ -120,14 +121,14 @@ void DFS_Visit(node *adjacent[],int visited[],int v,int n)
 	
 	//to visit the adjoining vertics or neighbours of v
 	while(p != NULL)
-    {
-       i = p->vertex;
-       if(visited[i] == 0)
-	   {
+    	{
+		i = p->vertex;
+    	   	if(visited[i] == 0)
+	   	{
 			DFS_Visit(adjacent,visited,i,n);
-	   }
+	   	}
 		p = p->next;
-    }
+	}
 	// to insert the finished vertex inside the linked list 
 	insertbeg(&topo,v);
 }
@@ -150,15 +151,12 @@ int main(void)
 	scanf("%d",&n);
 	int visited[n];
 	node *adjacent[n],*head = NULL;
-	
 	createGraph(adjacent,n);
 	insert(adjacent,n);
-	
 	for(i = 0;i < n;i++)
 	{
 		visited[i] = 0;
 	}
-	
 	DFS(adjacent,visited,n);
 	printf("\nThe topological sort ordering is : \n");
 	displayList(topo);
