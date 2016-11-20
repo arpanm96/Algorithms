@@ -95,8 +95,8 @@ void DFS_Visit(node *adjacent[],int visited[],int v,int n)
 	//to visit the adjoining vertics or neighbours of v
 	while(p != NULL)
   	{
-       i = p->vertex;
-       if(visited[i] == 0)
+           i = p->vertex;
+           if(visited[i] == 0)
 	   {
 			DFS_Visit(adjacent,visited,i,n);
 	   }
